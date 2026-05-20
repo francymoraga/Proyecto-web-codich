@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>CODICH</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="/assets/css/app.cssv=18a8ad5ff9" as="style" />
+    <link rel="preload" href="/assets/js/manifest.js?v=18a8ad5ff9" as="script" />
+    <link rel="preload" href="/assets/js/vendor.js?v=18a8ad5ff9" as="script" />
+    <link rel="preload" href="/assets/js/app.js?v=18a8ad5ff9" as="script" />
+
+      <link rel="preload" href="/assets/css/home.css?v=18a8ad5ff9" as="style" />
+  <link rel="preload" href="/assets/css/listing.css?v=18a8ad5ff9" as="style" />
+  <link rel="preload" href="/assets/js/home.js?v=18a8ad5ff9" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2?v=18a8ad5ff9") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff?v=18a8ad5ff9") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2?v=18a8ad5ff9") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff?v=18a8ad5ff9") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2?v=18a8ad5ff9") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff?v=18a8ad5ff9") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=18a8ad5ff9");
+        src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=18a8ad5ff9#iefix") format('embedded-opentype'),
+        url("/assets/fonts/icomoon/icomoon.ttf?101fc3?v=18a8ad5ff9") format('truetype'),
+        url("/assets/fonts/icomoon/icomoon.woff?101fc3?v=18a8ad5ff9") format('woff'),
+        url("/assets/fonts/icomoon/icomoon.svg?101fc3?v=18a8ad5ff9#icomoon") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=18a8ad5ff9" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="/assets/css/home.css?v=18a8ad5ff9" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/listing.css?v=18a8ad5ff9" media="screen" />
+
+
+    
+
+    <meta name="description" content="Colegio de Diseñadores Instruccionales Chile">
+    <link rel="canonical" href="https://www.codich.cl/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="next" href="https://www.codich.cl/page/2/">
+    
+    <meta property="og:site_name" content="CODICH">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CODICH">
+    <meta property="og:description" content="Colegio de Diseñadores Instruccionales Chile">
+    <meta property="og:url" content="https://www.codich.cl/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CODICH">
+    <meta name="twitter:description" content="Colegio de Diseñadores Instruccionales Chile">
+    <meta name="twitter:url" content="https://www.codich.cl/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "publisher": {
+        "@type": "Organization",
+        "name": "CODICH",
+        "url": "https://www.codich.cl/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.codich.cl/content/images/2024/08/IsotipoColores.png"
+        }
+    },
+    "url": "https://www.codich.cl/",
+    "name": "CODICH",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 1200,
+        "height": 800
+    },
+    "mainEntityOfPage": "https://www.codich.cl/",
+    "description": "Colegio de Diseñadores Instruccionales Chile"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 6.39">
+    <link rel="alternate" type="application/rss+xml" title="CODICH" href="https://www.codich.cl/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/sodo-search.min.js" data-key="0640dee4fcab79509665a07eb2" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/main.css" data-sodo-search="https://www.codich.cl/" data-locale="es" crossorigin="anonymous"></script>
+    
+    <link href="https://www.codich.cl/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=18a8ad5ff9"></script><style>:root {--ghost-accent-color: #4f8c53;}</style>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=18a8ad5ff9">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "https://www.codich.cl"
+      // @license-end
+    </script>
+
+      <script>
+        const nativeSearchEnabled = true
+      </script>
+
+
+      <style>
+        :root {
+          --show-fade-animation: 0;
+        }
+      </style>
+
+    <script>
+      if (typeof Storage !== 'undefined') {
+        const currentSavedTheme = localStorage.getItem('theme')
+
+        if (currentSavedTheme && currentSavedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      }
+    </script>
+  </head>
+  <body class="home-template">
+    
+
+
+
+
+<header class="m-header with-picture js-header"  data-animate="fade-down">
+  <div class="m-mobile-topbar">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Abrir menú">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="https://www.codich.cl" class="m-logo in-mobile-topbar">
+        <img src="https://www.codich.cl/content/images/2024/08/IsotipoColores.png" alt="CODICH" class="">
+      </a>
+    <button class="m-icon-button in-mobile-topbar " data-ghost-search aria-label="Abrir búsqueda">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Cerrar menú">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Menú principal">
+            <ul>
+                <li class="only-desktop">
+                  <a href="https://www.codich.cl" class="m-logo">
+                    <img src="https://www.codich.cl/content/images/2024/08/IsotipoColores.png" alt="CODICH" class="">
+                  </a>
+                </li>
+                
+    <li class="nav-home nav-current">
+      <a href="https://www.codich.cl/">Home</a>
+    </li>
+    <li class="nav-quienes-somos">
+      <a href="https://www.codich.cl/quienes-somos/">Quiénes somos</a>
+    </li>
+    <li class="nav-inscripciones">
+      <a href="https://www.codich.cl/inscripciones/">Inscripciones</a>
+    </li>
+    <li class="nav-estatutos">
+      <a href="https://drive.google.com/file/d/1AGpw7QghtW3Kz9pB20TGGLiGhdSl0ljN/view">Estatutos</a>
+    </li>
+    <li class="nav-preguntas-frecuentes">
+      <a href="https://www.codich.cl/preguntas-frecuentes/">Preguntas frecuentes</a>
+    </li>
+    <li class="nav-redes-sociales">
+      <a href="https://www.codich.cl/redes-sociales/">Redes Sociales</a>
+    </li>
+
+                <li class="more">
+                  <span>
+                    <a href="javascript:void(0);" class="js-open-secondary-menu">
+                      Más
+                      <span class="icon-chevron-down" aria-hidden="true"></span>
+                    </a>
+                  </span>
+                </li>
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Abrir submenú">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Artículos recientes</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="/elecciones-del-nuevo-directorio-de-codich/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="/content/images/size/w300/2024/05/Firefly-people-voting-for-elections-64944.jpg" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Elecciones del Nuevo Directorio de CODICH">
+                                      Elecciones del Nuevo Directorio de CODICH
+                                    </h3>
+                                    <span class="m-recent-article__date">hace 2 años</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/convenio-de-colaboracion-codich-gsca/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="/content/images/size/w300/2024/04/convenio.jpeg" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Convenio de Colaboración CODICH - GSCA">
+                                      Convenio de Colaboración CODICH - GSCA
+                                    </h3>
+                                    <span class="m-recent-article__date">hace 2 años</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/sexta-asamblea-general-de-colegiados/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="/content/images/size/w300/2024/04/1712956824856.jpg" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Sexta Asamblea General de Colegiados">
+                                      Sexta Asamblea General de Colegiados
+                                    </h3>
+                                    <span class="m-recent-article__date">hace 2 años</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="/tricel/" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1580894736036-7a68513983ec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDExfHx0ZWFjaGVyc3xlbnwwfHx8fDE3MTM1NTcwODd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="TRICEL">
+                                      TRICEL
+                                    </h3>
+                                    <span class="m-recent-article__date">hace 2 años</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Etiquetas</h3>
+                        <ul>
+                            <li>
+                              <a href="/tag/noticias/">Noticias</a>
+                            </li>
+                            <li>
+                              <a href="/tag/hash-perfil/">perfil</a>
+                            </li>
+                            <li>
+                              <a href="/tag/hash-socio-a/">socio/a</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main " data-ghost-search aria-label="Abrir búsqueda">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Alternar modo claro/oscuro" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Alternar modo claro/oscuro
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="secondary-navigation-template" style="display: none;">
+      
+  <ul class="m-secondary-menu">
+      <li class="nav-sign-up">
+        <a href="#/portal/">Sign up</a>
+      </li>
+  </ul>
+
+    </div>
+</header>
+
+<main class="main-wrap">
+  
+  <section class="m-hero with-picture" data-animate="fade">
+    <div class="m-hero__picture ">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGluc3RydWN0aW9uYWwlMjBkZXNpZ25lcnxlbnwwfHx8fDE3MTQwNjU5Mzh8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+  <div class="m-hero__content" data-animate="fade-down">
+    <h1 class="m-hero-title bigger">CODICH</h1>
+      <p class="m-hero-description bigger">Colegio de Diseñadores Instruccionales Chile</p>
+  </div>
+  </section>
+  <div class="l-content">
+    <div class="l-wrapper" data-animate="fade-up">
+      <div class="l-grid centered">
+        
+  <article class="m-article-card  post">
+    <div class="m-article-card__picture">
+      <a href="/elecciones-del-nuevo-directorio-de-codich/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="/content/images/size/w600/2024/05/Firefly-people-voting-for-elections-64944.jpg" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info no-tag">
+      <a href="/elecciones-del-nuevo-directorio-de-codich/" class="m-article-card__info-link" aria-label="Elecciones del Nuevo Directorio de CODICH">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Elecciones del Nuevo Directorio de CODICH">
+            Elecciones del Nuevo Directorio de CODICH
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post">
+    <div class="m-article-card__picture">
+      <a href="/convenio-de-colaboracion-codich-gsca/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="/content/images/size/w600/2024/04/convenio.jpeg" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info no-tag">
+      <a href="/convenio-de-colaboracion-codich-gsca/" class="m-article-card__info-link" aria-label="Convenio de Colaboración CODICH - GSCA">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Convenio de Colaboración CODICH - GSCA">
+            Convenio de Colaboración CODICH - GSCA
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-noticias">
+    <div class="m-article-card__picture">
+      <a href="/sexta-asamblea-general-de-colegiados/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="/content/images/size/w600/2024/04/1712956824856.jpg" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="https://www.codich.cl/tag/noticias/" class="m-article-card__tag">Noticias</a>
+      <a href="/sexta-asamblea-general-de-colegiados/" class="m-article-card__info-link" aria-label="Sexta Asamblea General de Colegiados">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Sexta Asamblea General de Colegiados">
+            Sexta Asamblea General de Colegiados
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post">
+    <div class="m-article-card__picture">
+      <a href="/tricel/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1580894736036-7a68513983ec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDExfHx0ZWFjaGVyc3xlbnwwfHx8fDE3MTM1NTcwODd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info no-tag">
+      <a href="/tricel/" class="m-article-card__info-link" aria-label="TRICEL">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="TRICEL">
+            TRICEL
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-noticias">
+    <div class="m-article-card__picture">
+      <a href="/quinta-asamblea-general-de-colegiados/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="/content/images/size/w600/2024/04/1710516639996.jpg" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="https://www.codich.cl/tag/noticias/" class="m-article-card__tag">Noticias</a>
+      <a href="/quinta-asamblea-general-de-colegiados/" class="m-article-card__info-link" aria-label="Quinta Asamblea General de Colegiados">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Quinta Asamblea General de Colegiados">
+            Quinta Asamblea General de Colegiados
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-noticias">
+    <div class="m-article-card__picture">
+      <a href="/dia-de-la-mujer/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1678401720448-f66c211d5354?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fDhtfGVufDB8fHx8MTcxMzU1Njg2Mnww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="https://www.codich.cl/tag/noticias/" class="m-article-card__tag">Noticias</a>
+      <a href="/dia-de-la-mujer/" class="m-article-card__info-link" aria-label="Día de la Mujer">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Día de la Mujer">
+            Día de la Mujer
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-noticias">
+    <div class="m-article-card__picture">
+      <a href="/segunda-asamblea-general-de-colegiados-copy/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="/content/images/size/w600/2024/04/1704211061877.jpg" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="https://www.codich.cl/tag/noticias/" class="m-article-card__tag">Noticias</a>
+      <a href="/segunda-asamblea-general-de-colegiados-copy/" class="m-article-card__info-link" aria-label="Cuarta Asamblea General de Colegiados">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Cuarta Asamblea General de Colegiados">
+            Cuarta Asamblea General de Colegiados
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-noticias">
+    <div class="m-article-card__picture">
+      <a href="/invitacion-taller-de-inteligencia-artificial/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="/content/images/size/w600/2024/04/Firefly-a-chibbi-artificial-intelligence-robot-with-glasses-showing-the-head-76810.jpg" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="https://www.codich.cl/tag/noticias/" class="m-article-card__tag">Noticias</a>
+      <a href="/invitacion-taller-de-inteligencia-artificial/" class="m-article-card__info-link" aria-label="Invitación Taller de Inteligencia Artificial">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Invitación Taller de Inteligencia Artificial">
+            Invitación Taller de Inteligencia Artificial
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 2 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-noticias tag-hash-socio-a tag-hash-perfil">
+    <div class="m-article-card__picture">
+      <a href="/perfil-de-socio-a/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1543269865-cbf427effbad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE0fHxwZW9wbGV8ZW58MHx8fHwxNzEzNTU2NDYwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="https://www.codich.cl/tag/noticias/" class="m-article-card__tag">Noticias</a>
+      <a href="/perfil-de-socio-a/" class="m-article-card__info-link" aria-label="Perfil de Socio/a">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Perfil de Socio/a">
+            Perfil de Socio/a
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 3 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card no-picture post tag-noticias no-image">
+    <div class="m-article-card__picture">
+      <a href="/segunda-asamblea-general-de-colegiados/" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+      <a href="https://www.codich.cl/author/codich/" class="m-article-card__author js-tooltip" aria-label="CODICH" data-tippy-content="Publicado por CODICH ">
+          <div style="background-image: url(/content/images/size/w100/2024/07/IsotipoColores.png);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="https://www.codich.cl/tag/noticias/" class="m-article-card__tag">Noticias</a>
+      <a href="/segunda-asamblea-general-de-colegiados/" class="m-article-card__info-link" aria-label="Segunda Asamblea General de Colegiados">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title js-article-card-title-no-image" title="Segunda Asamblea General de Colegiados">
+            Segunda Asamblea General de Colegiados
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>hace 3 años</span>
+          <span>&bull;</span>
+          <span>1 min de lectura</span>
+        </div>
+      </a>
+    </div>
+  </article>
+      </div>
+    </div>
+    
+<div class="l-wrapper">
+  <nav class="m-pagination" aria-label="Paginación">
+    <span class="m-pagination__text">Página 1 de 3</span>
+      <a href="/page/2/" class="m-icon-button filled in-pagination-right" aria-label="Entradas más antiguas">
+        <span class="icon-arrow-right"></span>
+      </a>
+  </nav>
+</div>
+
+  </div>
+</main>
+
+
+
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="Menú secundario en pie de página">
+        
+  <ul class="m-secondary-menu">
+      <li class="nav-sign-up">
+        <a href="#/portal/">Sign up</a>
+      </li>
+  </ul>
+
+      </nav>
+    <nav class="m-footer-social">
+        <a href="https://www.facebook.com/ghost" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="icon-facebook" aria-hidden="true"></span>
+        </a>
+        <a href="https://x.com/ghost" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="https://www.codich.cl/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>CODICH &copy; 2026</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Publicado con <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="/assets/html/javascript.html?v=18a8ad5ff9" rel="jslicense">Información de licencia JavaScript</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="/assets/js/manifest.js?v=18a8ad5ff9"></script>
+    <script defer src="/assets/js/vendor.js?v=18a8ad5ff9"></script>
+    <script defer src="/assets/js/app.js?v=18a8ad5ff9"></script>
+
+      <script defer src="/assets/js/home.js?v=18a8ad5ff9"></script>
+
+
+    
+  </body>
+</html>
